@@ -1,0 +1,3 @@
+File Name: FileToUploadIntoCloudStorageBucket.txt
+File location: /GCPStorage/src/main/resources/FileToUploadIntoCloudStorageBucket
+Description: This file is used to upload into GCP Cloud Storage Bucket
