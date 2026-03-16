@@ -6,7 +6,6 @@ images:
   - 'gcr.io/projectforpoc-489612/gcp-poc-app'
 
 options:
-    logging: GCS_ONLY
-    logsBucket: 'gs://shamimgcpbucket'
+    logging: CLOUD_LOGGING_ONLY
 	serviceAccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
 
