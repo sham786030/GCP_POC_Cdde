@@ -5,7 +5,7 @@ steps:
 images:
   - 'gcr.io/projectforpoc-489612/gcp-poc-app'
 
-options:
-  logging: NONE
-  # Try using an underscore if 'serviceAccount' was rejected
-  #serviceAccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
+o  options:
+    logging: GCS_ONLY
+    logsBucket: 'gs://shamimgcpbucket'
+	
