@@ -1,0 +1,14 @@
+steps:
+  # Step 1: Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/projectforpoc-489612/gcp-poc-app', '.']
+
+# Step 2: Push the image to Container Registry
+images:
+  - 'gcr.io/projectforpoc-489612/gcp-poc-app'
+
+options:
+  # Fixes the 'invalid argument' error by sending logs to Cloud Logging
+  logging: CLOUD_LOGGING_ONLY
+  # Ensure you replace [SERVICE_ACCOUNT_NAME] with your actual SA name
+  serviceaccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
