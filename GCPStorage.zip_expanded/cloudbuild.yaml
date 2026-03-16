@@ -6,7 +6,5 @@ images:
   - 'gcr.io/projectforpoc-489612/gcp-poc-app'
 
 options:
-  # Satisfies requirement (b) from the error message
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
-  # Capital 'A' in serviceAccount is mandatory
-  serviceAccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
+  # This is mandatory when using a custom service account
+  logging: CLOUD_LOGGING_ONLY
