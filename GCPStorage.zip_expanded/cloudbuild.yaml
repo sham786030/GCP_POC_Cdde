@@ -8,4 +8,5 @@ images:
 options:
     logging: GCS_ONLY
     logsBucket: 'gs://shamimgcpbucket'
-	
+	serviceAccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
+
