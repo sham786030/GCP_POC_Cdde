@@ -4,3 +4,9 @@ steps:
 
 images:
   - 'gcr.io/projectforpoc-489612/gcp-poc-app'
+
+options:
+  # This satisfies requirement (c) in the error message
+  logging: CLOUD_LOGGING_ONLY
+  # Ensure the capital 'A' and no extra spaces
+  serviceAccount: 'projects/projectforpoc-489612/serviceAccounts/shamim-service-account@projectforpoc-489612.iam.gserviceaccount.com'
