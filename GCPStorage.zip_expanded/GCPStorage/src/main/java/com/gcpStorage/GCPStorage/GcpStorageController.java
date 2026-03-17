@@ -38,8 +38,10 @@ public class GcpStorageController {
     @PostMapping("/upload")
     public String createBlob(@RequestParam String fileName, @RequestParam String content) {
         BlobId blobId = BlobId.of(bucketName, fileName);
+        logger.info("Inside /upload post method: "+"filename: "+fileName+"bucket name: "+bucketName);
         BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType("text/plain").build();
         storage.create(blobInfo, content.getBytes(StandardCharsets.UTF_8));
+        logger.info("File has been successfully uploaded blobInfo :"+blobInfo);
         return "File '" + fileName + "' uploaded successfully!";
     }
 
