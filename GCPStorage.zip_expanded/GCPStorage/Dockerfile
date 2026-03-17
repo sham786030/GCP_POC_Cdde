@@ -6,10 +6,10 @@ RUN mvn clean package -DskipTests
 
 ####
 
-# Stage 2: Run the application
-FROM openjdk:17-jdk-slim
+# Stage 2: Change the base image here
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-# Copy the jar from the build stage (adjust the jar name if different)
+# Copy the jar from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
 # Expose port 8080 for your Spring Boot app
